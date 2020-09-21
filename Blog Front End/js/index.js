@@ -23,15 +23,18 @@ const buildPosts = (blogPosts) => {
     for(blog of blogPosts) {
         const postDate = new Date(parseInt(blog.added_date)).toDateString();
         const postImage = `${API_BASE_URL}${blog.post_image}`;
+        const postLink = `/post.html?id=${blog.id}`;
         blogPostsContent += `
-        <div class="post">
-            <div class="post-image" style="background-image: url(${postImage});"></div>
-            <div class="post-content">
-                <div class="post-date">${postDate}</div>
-                <div class="post-title">${blog.title}</div>
-                <div class="post-text">${blog.content}</div> 
+        <a href="${postLink}" class="post-link">    
+            <div class="post">
+                <div class="post-image" style="background-image: url(${postImage});"></div>
+                <div class="post-content">
+                    <div class="post-date">${postDate}</div>
+                    <div class="post-title">${blog.title}</div>
+                    <div class="post-text">${blog.content}</div> 
+                </div>
             </div>
-        </div>
+        </a>
         `
     }
     
