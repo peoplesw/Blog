@@ -25,8 +25,6 @@ const postsData = new Post();
 
 // Endpoints Start
 
-
-
 // Parses Json data. Turns it into a JavaScript object we can use.
 app.use(express.json());
 

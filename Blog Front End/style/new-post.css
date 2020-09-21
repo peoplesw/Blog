@@ -5,6 +5,17 @@ form > * {
     font-size: 18px;
 }
 
+.new-post-subtext {
+    text-align: center;
+    font-size: 1.3em;
+}
+
+.new-post-title {
+    font-weight: bold;
+    font-size: 65px;
+    text-align: center;
+}
+
 #form-post-title {
     width: 300px;
 }
